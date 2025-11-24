@@ -1,0 +1,27 @@
+{
+  "name": "food-ordering-website",
+  "version": "1.0.0",
+  "description": "It is ReactJs Based Food Orering Website",
+  "homepage": "https://github.com/akashJan/food-ordering-website#readme",
+  "bugs": {
+    "url": "https://github.com/akashJan/food-ordering-website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akashJan/food-ordering-website.git"
+  },
+  "license": "ISC",
+  "author": "AkashJan",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.1"
+  },
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  }
+}
