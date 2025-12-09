@@ -58,10 +58,10 @@ const Header = () => {
 
           <li>
             <Link
-              to="/cart"
+              to="/grocery"
               className="relative text-lg font-semibold text-gray-700 pb-1 hover:text-rose-500 transition"
             >
-              Cart
+              Grocery
               <span className="absolute left-0 bottom-0 w-0 h-[3px] bg-rose-500 transition-all duration-300 rounded-md hover:w-full"></span>
             </Link>
           </li>
