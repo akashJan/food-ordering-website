@@ -1,10 +1,13 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { LOGO_URL } from "../util/constants";
 import useOnlineStatus from "../util/useOnlineStatus";
+import UserContext from "../util/UserContext";
 
 const Header = () => {
   const [buttonNameState, setButtonNameState] = useState("Login");
+
+  const { loggedInUser } = useContext(UserContext);
 
   const onlineStatus = useOnlineStatus();
 
@@ -83,6 +86,15 @@ const Header = () => {
           >
             {buttonNameState}
           </button>
+          <li>
+            <Link
+              to="/grocery"
+              className="relative text-lg font-semibold text-gray-700 pb-1 hover:text-rose-500 transition"
+            >
+              {loggedInUser}
+              <span className="absolute left-0 bottom-0 w-0 h-[3px] bg-rose-500 transition-all duration-300 rounded-md hover:w-full"></span>
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

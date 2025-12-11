@@ -7,7 +7,4 @@ export const RESTAURANTS_API =
   "https://proxy.corsfix.com/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.4512829&lng=73.8749514&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 
 export const MENU_API =
-  "https://api.allorigins.win/raw?url=" +
-  encodeURIComponent(
-    "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.4512829&lng=73.8749514&restaurantId="
-  );
+  "https://corsproxy.io/?https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.4512829&lng=73.8749514&restaurantId=";

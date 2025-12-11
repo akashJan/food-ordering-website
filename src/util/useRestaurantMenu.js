@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { MENU_API } from "./constants";
 
 const useRestaurantMenu = (resId) => {
@@ -10,23 +10,19 @@ const useRestaurantMenu = (resId) => {
 
   const fetchMenu = async () => {
     try {
-      const response = await fetch(MENU_API + resId);
+      const url = MENU_API + resId;
+      console.log("Fetching: ", url);
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch menu: " + response.status);
-      }
+      const response = await fetch(url);
 
-      const text = await response.text();
+      const text = await response.text(); // CHECK RAW RESPONSE
+      console.log("Raw Response:", text);
 
-      try {
-        const json = JSON.parse(text);
-        setResInfo(json.data);
-      } catch (err) {
-        console.error("JSON parse error:", err);
-        console.log("Response was:", text); // show HTML
-      }
+      const json = JSON.parse(text); // If valid JSON, this works
+
+      setResInfo(json.data);
     } catch (error) {
-      console.error("Menu API Error:", error);
+      console.log("Fetch Menu Error →", error);
     }
   };
 
