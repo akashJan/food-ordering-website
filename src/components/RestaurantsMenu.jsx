@@ -4,10 +4,6 @@ import { useParams } from "react-router-dom";
 
 import useRestaurantMenu from "../util/useRestaurantMenu";
 
-// https://proxy.corsfix.com/?
-// https://corsproxy.io/?
-// https://api.allorigins.win/raw?
-
 const RestaurantsMenu = () => {
   const { resId } = useParams();
 
